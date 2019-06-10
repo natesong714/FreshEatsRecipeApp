@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">workoutAppv0.1</string>
+    <string name="title_screen">Recipe Manager</string>
+    <!--Activity Main Start -->
+    <string name="start_button">Start!</string>
+    <string name="create_workout">Create Workout</string>
+    <string name="monday_title">"Monday: Chest and Biceps"</string>
+    <string name="tuesday_title">"Tuesday: Leg Day (Push)"</string>
+    <string name="wednesday_title">"Wednesday: Back and Triceps"</string>
+    <string name="thursday_title">"Thursday: Leg Day (Pull)"</string>
+    <string name="friday_title">"Friday: Shoulders and Traps"</string>
+    <string name="exercise1">"Friday: Shoulders and Traps"</string>
+    <string name="com_auth0_client_id">xQyj1XcWyrl0FZVleuA7R8peuHpsXFRO</string>
+    <string name="com_auth0_domain">dev-npw79x1y.auth0.com</string>
+    <string name="mProgressDialogString">HEY LISTEN</string>
+    <string name="auth_failed">Hey Dude the auth just failed</string>
+    <string name="email_password_status_fmt">Email User: %1$s (verified: %2$b)</string>    <string name="firebase_status_fmt">Firebase User: %s</string>
+    <string name="signed_out">I just signed out I guess</string>
+    <string name="verify_email">Verify Email</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="sign_in">Sign In</string>
+    <string name="hint_password">Hint Password</string>
+    <string name="hint_email">Hint Email</string>
+
+</resources>
