@@ -21,5 +21,7 @@
     <string name="sign_in">Sign In</string>
     <string name="hint_password">Hint Password</string>
     <string name="hint_email">Hint Email</string>
+    <string name="addImageDescription">This is an image.</string>
+    <string name="addRecipe">Add Recipe</string>
 
 </resources>

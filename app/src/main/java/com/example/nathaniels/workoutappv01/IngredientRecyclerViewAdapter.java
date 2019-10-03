@@ -1,8 +1,8 @@
 package com.example.nathaniels.workoutappv01;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,7 +39,7 @@ public class IngredientRecyclerViewAdapter extends RecyclerView.Adapter<Ingredie
         //Not super important to understand how it works
         //Same for every recyler adapter view you make
         //Recycling the view holders
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_listitem, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_list, parent, false);
         ViewHolder holder = new ViewHolder(view);
         return holder;
     }
