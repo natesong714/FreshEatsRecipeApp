@@ -27,6 +27,8 @@
         </activity>
         <activity android:name=".AddRecipeActivity" android:theme="@style/AppTheme.CustomTheme">
         </activity>
+        <activity android:name=".DeleteRecipeActivity">
+        </activity>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

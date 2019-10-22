@@ -8,8 +8,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
@@ -18,18 +20,22 @@ import java.util.ArrayList;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>{
+    public static final String KEY = "com.example.myfirstapp.MESSAGE";
 
     //typed as logt used for debugging
     private static final String TAG = "RecyclerViewAdapter";
 
     private ArrayList<String> mImageNames = new ArrayList<>();
     private ArrayList<String> mImages = new ArrayList<>();
+    private ArrayList<String> mKeys = new ArrayList<>();
     private Context mContext;
+    Button deleteBtn;
 
-    public RecyclerViewAdapter(Context context, ArrayList<String> imageNames, ArrayList<String> images) {
+    public RecyclerViewAdapter(Context context, ArrayList<String> imageNames, ArrayList<String> images, ArrayList<String> keys) {
         this.mImageNames = imageNames;
         this.mImages = images;
         this.mContext = context;
+        this.mKeys = keys;
     }
 
     @NonNull
@@ -59,15 +65,24 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         holder.imageName.setText(mImageNames.get(position));
 
+
+
         //Allows the toast to pop up
         holder.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(mContext, IngredientList.class);
+                //Pass in the key of the workout day
+                intent.putExtra(KEY, mKeys.get(position));
                 mContext.startActivity(intent);
-                //Log.d(TAG, "onClick: clicked on: " + mImageNames.get(position));
-
-                //Toast.makeText(mContext, mImageNames.get(position), Toast.LENGTH_SHORT).show();
+            }
+        });
+        holder.deleteBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, DeleteRecipeActivity.class);
+                intent.putExtra(KEY, mKeys.get(position));
+                mContext.startActivity(intent);
             }
         });
     }
@@ -79,6 +94,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     //Holds the view(widget) in memory of each individual entry
     public class ViewHolder extends RecyclerView.ViewHolder{
+        Button deleteBtn;
         CircleImageView image;
         TextView imageName;
         RelativeLayout parentLayout;
@@ -88,6 +104,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             //Attaching image to the IDs
             image = itemView.findViewById(R.id.image);
             imageName = itemView.findViewById(R.id.image_name);
+            deleteBtn = itemView.findViewById(R.id.deleteBtn);
             parentLayout = itemView.findViewById(R.id.parent_layout);
         }
     }

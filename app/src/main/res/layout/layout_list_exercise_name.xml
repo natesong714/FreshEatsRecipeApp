@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/parent_layout">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/exerciseName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLength="45"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/weight1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:hint="0"
+            android:maxLength="3"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/rep1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="0"
+            android:maxLength="3"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/weight2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:hint="0"
+            android:maxLength="3"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/rep2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="0"
+            android:maxLength="3"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/weight3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:hint="0"
+            android:maxLength="3"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/rep3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="0"
+            android:maxLength="3"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/weight4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:hint="0"
+            android:maxLength="3"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/rep4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="0"
+            android:maxLength="3"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/weight5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:hint="0"
+            android:maxLength="3"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/rep5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="0"
+            android:maxLength="3"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+</RelativeLayout>
